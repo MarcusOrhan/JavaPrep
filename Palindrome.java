@@ -20,4 +20,16 @@ public class Palindrome {
         System.out.println( str +"  is NOT a Palindrome");
         return false;
     }
+
+    public static boolean isPalindromeLoop(String str) {
+        int head = 0;
+        int tail = str.length() - 1;
+        while (head < tail) {
+            if (str.charAt(head) != str.charAt(tail)) {
+                return false;
+            }
+            head++;
+            tail--;
+        }
+        return true; }
 }
